@@ -1,0 +1,40 @@
+.preloader {
+  position: fixed;
+  z-index: 2500;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999999;
+  .status {
+    position: fixed;
+    z-index: 999999;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-size: 32px 32px;
+    margin-top: -125px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: -160px;
+    .center-text {
+      top: 70%;
+      text-align: center;
+      background-image: url(./loading.gif);
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 180px;
+      width: 250px;
+      span {
+        font-size: 14px;
+        color: #999999;
+        position: relative;
+        top: 150px;
+        left: 43px;
+      }
+    }
+  }
+}

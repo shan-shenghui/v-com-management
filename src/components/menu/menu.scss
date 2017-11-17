@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+/*滚动条样式*/
+@import '../../assets/css/scroll';
+
+$disBlock: inline-block;
+$disCenter: 0 auto;
+
+.main {
+  width: 100%;
+  position: absolute;
+  height: calc(100% - 60px);
+  min-height: calc(100% - 60px);
+}
+
+.left {
+  width: 200px;
+  float: left;
+
+}
+
+.listTree {
+  width: 200px;
+  position: absolute;
+  height: calc(100% - 90px);
+  min-height: calc(100% - 90px);
+  background-color: #373D41;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}
+
+.sidebar-fold {
+  height: 30px;
+  width: 100%;
+  background: #4a5064;
+  color: #aeb9c2;
+  text-align: center;
+  line-height: 30px !important;
+  font-size: 12px;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+
+.sidebar-fold:hover .wrapi {
+  color: white;
+}
+
+.wrapi2 {
+  color: #fff;
+  margin-left: 10px;
+}
+
+.panel {
+  border: 0;
+}
+
+.panel-title span {
+  color: #fff;
+}
+
+.panel-title a {
+  text-decoration: none;
+}
+
+.panel-title span :hover {
+  text-decoration: none;
+}
+
+.panel-heading {
+  background-color: #4A5064;
+}
+
+.panel-group {
+  margin-top: 5px;
+}
+
+.panel-heading:hover {
+  background-color: #00C1DE;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+  border-top: 0px;
+  padding: 0px;
+}
+
+.list-group {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  border: 0px;
+  background-color: #333744;
+}
+
+.list-group-item:hover {
+  background-color: #465064;
+}
+
+.list-group-item a {
+  margin: $disCenter;
+  text-align: center;
+  display: $disBlock;
+  color: white;
+  text-decoration: none;
+}
+
+.list-group-item .el-icon-document {
+  color: white;
+}
+
+.list-group-item .el-icon-document {
+  display: $disBlock;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.develop {
+  width: 200px;
+
+}
+
+.reduce {
+  width: 64px;
+}
+
+.right {
+  float: right;
+}
+
+.develop2 {
+  width: calc(100% - 200px);
+  position: absolute;
+  height: calc(100% - 60px);
+  min-height: calc(100% - 60px);
+  background-color: #ffffff;
+  margin-left: 200px;
+}
+
+.reduce2 {
+  width: calc(100% - 64px);
+  position: absolute;
+  height: calc(100% - 60px);
+  min-height: calc(100% - 60px);
+  background-color: #ffffff;
+  margin-left: 64px;
+}
+

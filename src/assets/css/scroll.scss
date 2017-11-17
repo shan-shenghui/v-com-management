@@ -1,0 +1,22 @@
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 2px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 2px;
+  background-color: rgba(125, 125, 125, 0.7);
+  -webkit-border-radius: 2px;
+}

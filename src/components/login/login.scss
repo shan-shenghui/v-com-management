@@ -1,0 +1,61 @@
+
+.login {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  min-width: 1000px;
+  background-color: #FFFFFF;
+}
+
+.lineH {
+  height: 60px;
+}
+
+.lineH a {
+  text-decoration: none;
+  color: darkgray;
+}
+
+.lineH a:hover {
+  color: grey;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 20px;
+}
+
+.borderBottom {
+  border-bottom: 1px solid grey;
+}
+
+.hight {
+  height: 100%;
+}
+
+.paddingT {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.ebiz-login__copy {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.ebiz-login__copy {
+  color: darkgray;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: -15px;
+}
