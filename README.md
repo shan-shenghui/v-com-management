@@ -24,3 +24,6 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 # vuejs2 + vuex+  + scss + webpack  + element-ui  目前mock数据
 
 # nodejs + mongdb 后期完善。。。
+
+初始用户: 111  
+密码 : 111
