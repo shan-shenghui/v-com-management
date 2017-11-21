@@ -26,7 +26,7 @@
             <el-form :label-position="labelPosition" :model="formLabelAlign"
                      style="border: 2px solid grey; padding:10px 40px; border-radius: 5px;">
               <el-form-item>
-                <el-input v-model="formLabelAlign.name" placeholder="用户名" suffix-icon="glyphicon glyphicon-user">
+                <el-input v-model="formLabelAlign.name" autofocus placeholder="用户名" suffix-icon="glyphicon glyphicon-user">
 
                 </el-input>
               </el-form-item>
@@ -49,7 +49,7 @@
               </el-form-item>
 
               <el-form-item>
-                <el-button @click="login" type="primary" style="width: 100%;">提交</el-button>
+                <el-button type="primary" style="width: 100%;" @click="login">提交</el-button>
               </el-form-item>
               <el-form-item>
                 <el-checkbox v-model="formLabelAlign.checked">一周内自动登陆</el-checkbox>
@@ -190,7 +190,7 @@
 
           this.$store.dispatch('changeClickData', 'system');
 
-          this.$router.push({
+          this.$router.replace({
             path: '/System'
           });
 
