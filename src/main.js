@@ -12,14 +12,18 @@ import './assets/libs/Font-Awesome-3.2.1/css/font-awesome.css'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-import './assets/js/autoAddCssfix'
+// import './assets/js/autoAddCssfix'  //自动追加css前缀插件 目前在Hbuild上使用
 
 //引入vuex 的store
 import store from './store'
 
+import axios from 'axios'  
+
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
+
+Vue.prototype.$http = axios;   //http 请求
 
 
 // 路由跳转
