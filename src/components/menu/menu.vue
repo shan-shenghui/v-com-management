@@ -25,7 +25,8 @@
             <div :id="'item'+ index" class="panel-collapse collapse">
               <div class="panel-body">
                 <ul class="list-group">
-                  <li class="list-group-item" v-for="(item2,index2) in item.children" :key="index2" @click="$goRoute(item2.path)">
+                  <li class="list-group-item" v-for="(item2,index2) in item.children" :key="index2"
+                      @click="$goRoute(item2.path)">
                     <i class="icon-tasks wrapi2"></i>
                     <a>{{item2.name}}</a>
                   </li>
@@ -65,13 +66,14 @@
 //        type: Array,
 //        required:true
 //      }
+
     },
     computed: {
       list(){
 
-        var clickData = this.$store.state.clickData
+        var pageMenuList = this.$store.state.pageMenuList;
 
-        return this.$store.state.treeListData[clickData] || [];
+        return pageMenuList || [];
       }
     }
   }

@@ -10,7 +10,7 @@
 
         <el-col :span="1" v-for="(item, key) in headerData" :key="key">
           <div class="titleS">
-            <a @click="$goRoute(item.path);putStoreClickData(item.path)"><span>{{item.name}}</span></a>
+            <a @click="$goRoute(item.path);"><span>{{item.name}}</span></a>
           </div>
         </el-col>
 
@@ -123,10 +123,6 @@
       }
     },
     methods: {
-      putStoreClickData(path){
-
-        this.$store.dispatch('changeClickData', path.substr(1))
-      },
       handleCommand(command){
         if (command == 'loginOut') {
           this.$confirm('您确定要退出该系统嘛?', '提示', {

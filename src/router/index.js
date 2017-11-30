@@ -17,6 +17,8 @@ import iwm from '@/components/iwm/iwm.vue'
 import repository from '@/components/repository/repository.vue';
 
 Vue.use(Router)
+
+
 /*resolve 按需加载  */
 let router = new Router({
   routes: [

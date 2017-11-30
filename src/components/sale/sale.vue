@@ -23,7 +23,9 @@
     },
     computed: {
       list(){
-        return this.$store.state.treeListData.systemData || [];
+        var pageMenuList = this.$store.state.pageMenuList
+
+        return pageMenuList || [];
       }
     }
 

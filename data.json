@@ -1,0 +1,63 @@
+{
+  "system": [
+    {
+      "name": "组织结构",
+      "children": [
+        {
+          "name": "集团管理",
+          "path": "/system/bg"
+        },
+        {
+          "name": "公司管理",
+          "path": "/system/company"
+        },
+        {
+          "name": "客户管理",
+          "path": "/system/customer"
+        },
+        {
+          "name": "供应商",
+          "path": "/system/supplier"
+        },
+        {
+          "name": "企业关系组",
+          "path": "/system/list"
+        },
+        {
+          "name": "企业关系列表",
+          "path": "/system/prcode"
+        }
+      ]
+    },
+    {
+      "name": "用户权限",
+      "children": [
+        {
+          "name": "客户用户管理",
+          "path": "/system/customerUserManage"
+        }
+      ]
+    },
+    {
+      "name": "导入导出",
+      "children": [
+        {
+          "name": "货单导出",
+          "path": "/system/exporten"
+        }
+      ]
+    }
+  ],
+  "base": [
+  ],
+  "sale": [
+  ],
+  "buy": [
+  ],
+  "cts": [
+  ],
+  "iwm": [
+  ],
+  "repository": [
+  ]
+}
