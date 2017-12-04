@@ -17,16 +17,15 @@
     data() {
       return {}
     },
+    computed: {
+      list (){
+        let allMenuList = JSON.parse(sessionStorage.getItem('allMenuList'));
+        return allMenuList.buy;
+      }
+    },
     components: {
       menuList,
       eHeader
-    },
-    computed: {
-      list(){
-        var pageMenuList = this.$store.state.pageMenuList
-
-        return pageMenuList || [];
-      }
     }
 
   }

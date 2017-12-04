@@ -62,18 +62,9 @@
       }
     },
     props: {
-//      list: {
-//        type: Array,
-//        required:true
-//      }
-
-    },
-    computed: {
-      list(){
-
-        var pageMenuList = this.$store.state.pageMenuList;
-
-        return pageMenuList || [];
+      list: {
+        type: Array,
+        required: true
       }
     }
   }

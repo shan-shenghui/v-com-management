@@ -178,12 +178,18 @@
             type: 'warning'
           });
           this.createCodes();
+
           return false;
         } else {
+
+          //
+
           return true;
         }
       },
       login(){
+
+
         if (this.loginCheck()) {
           //验证通过
 
@@ -198,34 +204,34 @@
           }
 
 
-          if (this.getMenuList()) {
-            this.$router.replace({
-              path: '/System'
-            });
-          } else {
-            this.$router.replace({
-              path: '/login'
-            });
-          }
+          this.getMenuList();  //
+
 
         }
 
-
       },
-      getMenuList (){
-        this.$http({
-          method: 'post',
-          url: '../../../data.json',
-          data: {}
-        }).then(function (response) {
-          console.log(response);
-          sessionStorage.setItem('menuList', response);
-          return true;
+      getMenuList(){
+        const _this = this;
 
-        }).catch(function (error) {
-          console.log('返回menuList 错误：' + error);
-          return false;
-        });
+        this.$http.get('http://localhost:8080/static/data.json')
+          .then(function (response) {
+            console.log(response.data);
+            if (response.data.length) {
+
+              console.log(JSON.stringify(response.data[0]));
+              sessionStorage.setItem('allMenuList', JSON.stringify(response.data[0]));
+              _this.$router.replace({
+                path: '/system'
+              });
+            }
+
+          })
+          .catch(function (err) {
+            console.log(err);
+            _this.$router.replace({
+              path: '/login'
+            });
+          });
 
       }
     }

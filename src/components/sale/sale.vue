@@ -23,9 +23,8 @@
     },
     computed: {
       list(){
-        var pageMenuList = this.$store.state.pageMenuList
-
-        return pageMenuList || [];
+        let allMenuList = JSON.parse(sessionStorage.getItem('allMenuList'));
+        return allMenuList.sale;
       }
     }
 

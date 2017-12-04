@@ -43,7 +43,7 @@ const state = {
       "path": "/repository"
     }],  //header 数据
 
-  pageMenuList: []
+  pageMenuList: []   //当前路由下的menu data
 
 };
 

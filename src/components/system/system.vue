@@ -2,7 +2,7 @@
   <div>
     <e-header></e-header>
     <div class="system">
-      <menu-list></menu-list>
+      <menu-list :list="list"></menu-list>
     </div>
   </div>
 
@@ -16,6 +16,12 @@
   export default {
     data() {
       return {}
+    },
+    computed: {
+      list (){
+        let allMenuList = JSON.parse(sessionStorage.getItem('allMenuList'));
+        return allMenuList.system;
+      }
     },
     components: {
       menuList,

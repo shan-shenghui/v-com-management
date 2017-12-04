@@ -1,0 +1,209 @@
+[
+  {
+    "system": [
+      {
+        "name": "组织结构",
+        "children": [
+          {
+            "name": "集团管理",
+            "path": "/system/bg"
+          },
+          {
+            "name": "公司管理",
+            "path": "/system/company"
+          },
+          {
+            "name": "客户管理",
+            "path": "/system/customer"
+          },
+          {
+            "name": "供应商",
+            "path": "/system/supplier"
+          },
+          {
+            "name": "企业关系组",
+            "path": "/system/list"
+          },
+          {
+            "name": "企业关系列表",
+            "path": "/system/prcode"
+          }
+        ]
+      },
+      {
+        "name": "用户权限",
+        "children": [
+          {
+            "name": "客户用户管理",
+            "path": "/system/customerUserManage"
+          }
+        ]
+      },
+      {
+        "name": "导入导出",
+        "children": [
+          {
+            "name": "货单导出",
+            "path": "/system/exporten"
+          }
+        ]
+      }
+    ],
+    "sale": [
+      {
+        "name": "订单录入",
+        "children": [
+          {
+            "name": "快速订单录入",
+            "path": "/sale/add"
+          },
+          {
+            "name": "标准订单录入",
+            "path": "/sale/sdOrderInput"
+          },
+          {
+            "name": "退货单录入",
+            "path": "/sale/input"
+          },
+          {
+            "name": "录入订单查询",
+            "path": "/sale/search"
+          },
+          {
+            "name": "销售订单审批",
+            "path": "/sale/audit"
+          }
+        ]
+      },
+      {
+        "name": "订单执行",
+        "children": [
+          {
+            "name": "销售执行订单查询",
+            "path": "/sale/execsearch"
+          },
+          {
+            "name": "发货单明细查询",
+            "path": "/sale/dnDetail"
+          },
+          {
+            "name": "发货单",
+            "path": "/sale/dn"
+          },
+          {
+            "name": "发货单审批",
+            "path": "/sale/auditdn"
+          },
+          {
+            "name": "送货地图",
+            "path": "/sale/orderDistri"
+          },
+          {
+            "name": "退货单查询",
+            "path": "/sale/orderSearch"
+          },
+          {
+            "name": "相关单据查询",
+            "path": "/sale/bg"
+          },
+          {
+            "name": "合作伙伴发货单查询",
+            "path": "/sale/relatedDoc"
+          }
+        ]
+      },
+      {
+        "name": "营销工具",
+        "children": [
+          {
+            "name": "商品上下架",
+            "path": "/sale/Proisting"
+          }
+        ]
+      }
+    ],
+    "base": [
+      {
+        "name": "产品目录",
+        "children": [
+          {
+            "name": "目录管理",
+            "path": "/base/catalog"
+          },
+          {
+            "name": "标准产品",
+            "path": "/base/stdItem"
+          },
+          {
+            "name": "属性产品",
+            "path": "/base/item"
+          },
+          {
+            "name": "目录组管理",
+            "path": "/base/catalogGroupAdmin"
+          },
+          {
+            "name": "目录组分类",
+            "path": "/base/cataloggroupClass"
+          },
+          {
+            "name": "目录组授权",
+            "path": "/base/categoryGroupAuth"
+          },
+          {
+            "name": "商品线管理",
+            "path": "/base/productline"
+          }
+        ]
+      }
+    ],
+    "buy": [
+      {
+        "name": "订单录入",
+        "children": []
+      },
+      {
+        "name": "订单执行",
+        "children": []
+      },
+      {
+        "name": "采购工具",
+        "children": []
+      }
+    ],
+    "cts": [
+      {
+        "name": "客户积分",
+        "children": []
+      }
+    ],
+    "iwm": [
+      {
+        "name": "库存主数据",
+        "children": []
+      },
+      {
+        "name": "库存事务",
+        "children": []
+      },
+      {
+        "name": "库存查询",
+        "children": []
+      },
+      {
+        "name": "盘点管理",
+        "children": []
+      }
+    ],
+    "repository": [
+      {
+        "name": "入库管理",
+        "children": []
+      },
+      {
+        "name": "出库管理",
+        "children": []
+      }
+    ]
+  }
+]
