@@ -15,7 +15,13 @@ const state = {
   },
 
   loginTime: {time: new Date().toLocaleString()},   //登陆时间
-  assignData: {data: ['帮助文档', '问题反馈', '联系我们']},
+  assignData: {
+    data: [
+      {name: '帮助文档', path: 'https://www.zhihu.com/#signin'}, {
+        name: '问题反馈',
+        path: 'mailto:1275526416@qq.com'
+      }, {name: '联系我们', path: 'tencent://Message/?Uin=1275526416&websiteName=www.oicqzone.com&Menu=yes'}]
+  },
   headerData: [
     {
       "name": "系统",

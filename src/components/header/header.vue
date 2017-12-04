@@ -53,7 +53,8 @@
               支持<i class="el-icon-arrow-down el-icon--right"></i>
                </span>
               <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item v-for="(item,index) in assignData" :key="index" @click="">{{item}}
+                <el-dropdown-item v-for="(item,index) in assignData" :key="index">
+                  <a :href="item.path" target="_blank">{{item.name}}</a>
                 </el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
@@ -68,8 +69,8 @@
                欢迎您,{{username}}<i class="el-icon-arrow-down el-icon--right"></i>
                </span>
               <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item command="changePass">修改密码</el-dropdown-item>
-                <el-dropdown-item command="loginOut">退出</el-dropdown-item>
+                <el-dropdown-item command="changePass"><a>修改密码</a></el-dropdown-item>
+                <el-dropdown-item command="loginOut"><a>退出</a></el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
 
@@ -171,6 +172,7 @@
         }
       }
     }
+
   }
 </script>
 

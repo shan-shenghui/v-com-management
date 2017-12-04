@@ -1,5 +1,3 @@
-<!--集团管理-->
-
 <template>
   <div class="bg">
     <bg-header @addrefleshcover="addrefleshcover"></bg-header>

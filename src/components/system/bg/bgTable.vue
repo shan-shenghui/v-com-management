@@ -68,6 +68,7 @@
 <style scoped>
   .table_bg {
     padding: 15px 5px;
+    min-height:500px;
   }
 
 </style>
