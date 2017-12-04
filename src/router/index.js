@@ -8,6 +8,10 @@ import customer from '@/components/system/customer/customer.vue'
 import company from '@/components/system/company/company.vue'
 import supplier from '@/components/system/supplier/supplier.vue'
 import list from '@/components/system/list/list.vue'
+import exporten from '@/components/system/export/export.vue'
+import prcode from '@/components/system/prcode/prcode.vue'
+import customerUserManage from '@/components/system/customerUserManage/customerUserManage.vue'
+
 
 import base from '@/components/base/base.vue'
 import sale from '@/components/sale/sale.vue'
@@ -65,48 +69,54 @@ let router = new Router({
         {
           path: 'prcode',
           name: 'prcode',
-          component: list
+          component: prcode
         },
         {
           path: 'customerUserManage',
           name: 'customerUserManage',
-          component: list
+          component: customerUserManage
         },
         {
-          path: 'exexporten',
-          name: 'exexporten',
-          component: list
+          path: 'exporten',
+          name: 'exporten',
+          component: exporten
         }]
     },
     {
       path: '/base',
       name: 'base',
-      component: base
+      component: base,
+      children: []
     },
     {
       path: '/sale',
       name: 'sale',
-      component: sale
+      component: sale,
+      children: []
     },
     {
       path: '/buy',
       name: 'buy',
-      component: buy
+      component: buy,
+      children: []
     },
     {
       path: '/cts',
       name: 'cts',
-      component: cts
+      component: cts,
+      children: []
     },
     {
       path: '/iwm',
       name: 'iwm',
-      component: iwm
+      component: iwm,
+      children: []
     },
     {
       path: '/repository',
       name: 'repository',
-      component: repository
+      component: repository,
+      children: []
     },
     {
       path: '/news',

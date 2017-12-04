@@ -1,5 +1,5 @@
 <template>
   <div>
-    export
+    prcode
   </div>
 </template>

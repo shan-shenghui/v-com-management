@@ -156,7 +156,7 @@
                    </div>
 
                   <div class="row">
-                    <label>请输入新密码：</label>
+                    <label>新密码：</label>
                     <input type="text" class="form-control"  style="width:350px" v-model="userMess.newPass">
                   </div>
                   <div class="row">
