@@ -40,8 +40,10 @@
                 <el-form-item>
                   <div class="row">
                     <div class="col-md-6">
-                      <el-input v-model="formLabelAlign.checkCode" @keyup.enter="login" size="small"
-                                placeholder="验证码"></el-input>
+                      <!--  <el-input v-model="formLabelAlign.checkCode" @keyup.enter="login" size="small"
+                                  placeholder="验证码"></el-input>-->
+                      <input class="codeCheckInput" type="text" @keyup.enter="login" placeholder="验证码"
+                             v-model="formLabelAlign.checkCode"/>
                     </div>
                     <div class="col-md-6">
                     <span><canvas id="myCanvas" width="70px" height="37px"
@@ -56,7 +58,7 @@
                   <el-button type="primary" style="width: 100%;" @click="login">提交</el-button>
                 </el-form-item>
                 <el-form-item>
-                  <el-checkbox v-model="formLabelAlign.checked">一周内自动登陆</el-checkbox>
+                  <el-checkbox v-model="formLabelAlign.autoLogin">一周内自动登陆</el-checkbox>
                 </el-form-item>
 
                 <div class="divide"></div>
@@ -94,7 +96,7 @@
           name: '',
           pass: '',
           checkCode: '',
-          checked: false
+          autoLogin: false
         }
       }
     },
@@ -114,9 +116,10 @@
           let day = range / (24 * 60 * 60 * 1000);
           if (day > 7) {
             localStorage.removeItem('loginTime');
+            localStorage.removeItem('userName');
           } else {
             this.$router.push({
-              path: '/System'
+              path: '/system'
             });
           }
 
@@ -189,11 +192,10 @@
       },
       login(){
 
-
         if (this.loginCheck()) {
           //验证通过
 
-          if (this.formLabelAlign.checked) {   //保存 date  user信息到localStorage
+          if (this.formLabelAlign.autoLogin) {   //保存 date  user信息到localStorage
             localStorage.setItem('loginTime', new Date().getTime());
             localStorage.setItem('userName', "单胜辉");
           } else {

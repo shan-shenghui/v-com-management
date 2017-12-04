@@ -26,7 +26,7 @@
               title=""
               width="200"
               trigger="hover"
-              content="当前没有后台任务正在运行">
+              :content="currentTask">
             </el-popover>
             <span><i class="el-icon-circle-check-outline"></i> </span>
           </div>
@@ -96,10 +96,10 @@
         defaultActive2: 'name2',
         visible2: '',
         visible3: '',
-        userMess :{
-          passR:'',
-          newPass:'',
-          newPassC:''
+        userMess: {
+          passR: '',
+          newPass: '',
+          newPassC: ''
         }
       }
     },
@@ -120,6 +120,9 @@
         } else {
           return localStorage.getItem('userName');
         }
+      },
+      currentTask (){
+        return '当前没有后台任务正在运行';
       }
     },
     methods: {
@@ -131,22 +134,21 @@
             type: 'warning'
           }).then(() => {
             localStorage.removeItem('userName');
-          localStorage.removeItem('loginTime');
-          sessionStorage.removeItem('userName');
+            localStorage.removeItem('loginTime');
+            sessionStorage.removeItem('userName');
 
-          this.$router.push({
-            path: '/login'
-          });
+            this.$router.push({
+              path: '/login'
+            });
 
 
-        }).
-          catch(() => {
+          }).catch(() => {
             this.$notify.info({
-            title: '提示',
-            duration: 1000,
-            message: '已取消退出'
+              title: '提示',
+              duration: 1000,
+              message: '已取消退出'
+            });
           });
-        });
         } else {
           //changePass
           this.$alert(` <div class="container">
