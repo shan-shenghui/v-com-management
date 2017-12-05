@@ -13,9 +13,8 @@
           <div class="panel" v-for="(item,index) in list" :key="index">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion"
-                   :href="'#item'+ index">
-                  <i class="icon-user wrapi2" wrapi2></i>
+                <a :href="'#item'+ index"  data-toggle="collapse" data-parent="#accordion">
+                  <i class="icon-user wrapi2"></i>
                   <span class="title">
                           {{item.name}}
                       </span>

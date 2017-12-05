@@ -1,368 +1,381 @@
 [
   {
-    "title": {
-      "text": "公司开销"
-    },
-    "tooltip": {},
-    "legend": {
-      "data": [
-        "金额"
-      ]
-    },
-    "xAxis": {
-      "data": [
-        "发放员工工资",
-        "返还支行",
-        "社保缴纳",
-        "电话费",
-        "电费",
-        "水费"
-      ]
-    },
-    "yAxis": {},
-    "series": [
-      {
-        "name": "金额",
-        "type": "bar",
+    "id": "e_0",
+    "option": {
+      "title": {
+        "text": "公司开销"
+      },
+      "tooltip": {},
+      "legend": {
         "data": [
-          50000,
-          20000,
-          36000,
-          10000,
-          1000,
-          200
-        ]
-      }
-    ]
-  },
-  {
-    "tooltip": {
-      "trigger": "item",
-      "formatter": "{a} <br/>{b}: {c} ({d}%)"
-    },
-    "legend": {
-      "orient": "vertical",
-      "x": "left",
-      "data": [
-        "直达",
-        "营销广告",
-        "搜索引擎",
-        "邮件营销",
-        "联盟广告",
-        "视频广告",
-        "百度",
-        "谷歌",
-        "必应",
-        "其他"
-      ]
-    },
-    "series": [
-      {
-        "name": "访问来源",
-        "type": "pie",
-        "selectedMode": "single",
-        "radius": [
-          0,
-          "30%"
-        ],
-        "label": {
-          "normal": {
-            "position": "inner"
-          }
-        },
-        "labelLine": {
-          "normal": {
-            "show": false
-          }
-        },
-        "data": [
-          {
-            "value": 335,
-            "name": "直达",
-            "selected": true
-          },
-          {
-            "value": 679,
-            "name": "营销广告"
-          },
-          {
-            "value": 1548,
-            "name": "搜索引擎"
-          }
+          "金额"
         ]
       },
-      {
-        "name": "访问来源",
-        "type": "pie",
-        "radius": [
-          "40%",
-          "55%"
-        ],
-        "label": {
-          "normal": {
-            "formatter": "{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ",
-            "backgroundColor": "#eee",
-            "borderColor": "#aaa",
-            "borderWidth": 1,
-            "borderRadius": 4,
-            "rich": {
-              "a": {
-                "color": "#999",
-                "lineHeight": 22,
-                "align": "center"
-              },
-              "hr": {
-                "borderColor": "#aaa",
-                "width": "100%",
-                "borderWidth": 0.5,
-                "height": 0
-              },
-              "b": {
-                "fontSize": 16,
-                "lineHeight": 33
-              },
-              "per": {
-                "color": "#eee",
-                "backgroundColor": "#334455",
-                "padding": [
-                  2,
-                  4
-                ],
-                "borderRadius": 2
-              }
-            }
-          }
-        },
+      "xAxis": {
         "data": [
-          {
-            "value": 335,
-            "name": "直达"
-          },
-          {
-            "value": 310,
-            "name": "邮件营销"
-          },
-          {
-            "value": 234,
-            "name": "联盟广告"
-          },
-          {
-            "value": 135,
-            "name": "视频广告"
-          },
-          {
-            "value": 1048,
-            "name": "百度"
-          },
-          {
-            "value": 251,
-            "name": "谷歌"
-          },
-          {
-            "value": 147,
-            "name": "必应"
-          },
-          {
-            "value": 102,
-            "name": "其他"
-          }
+          "发放员工工资",
+          "返还支行",
+          "社保缴纳",
+          "电话费",
+          "电费",
+          "水费"
         ]
-      }
-    ]
-  },
-  {
-    "title": {
-      "text": "某站点用户访问来源",
-      "subtext": "纯属虚构",
-      "x": "center"
-    },
-    "tooltip": {
-      "trigger": "item",
-      "formatter": "{a} <br/>{b} : {c} ({d}%)"
-    },
-    "legend": {
-      "orient": "vertical",
-      "left": "left",
-      "data": [
-        "直接访问",
-        "邮件营销",
-        "联盟广告",
-        "视频广告",
-        "搜索引擎"
-      ]
-    },
-    "series": [
-      {
-        "name": "网站访问来源",
-        "type": "pie",
-        "radius": "55%",
-        "center": [
-          "50%",
-          "60%"
-        ],
-        "data": [
-          {
-            "value": 335,
-            "name": "直接访问"
-          },
-          {
-            "value": 310,
-            "name": "邮件营销"
-          },
-          {
-            "value": 234,
-            "name": "联盟广告"
-          },
-          {
-            "value": 135,
-            "name": "视频广告"
-          },
-          {
-            "value": 1548,
-            "name": "搜索引擎"
-          }
-        ],
-        "itemStyle": {
-          "emphasis": {
-            "shadowBlur": 10,
-            "shadowOffsetX": 0,
-            "shadowColor": "rgba(0, 0, 0, 0.5)"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "title": {
-      "text": "一天用电量分布",
-      "subtext": "纯属虚构"
-    },
-    "tooltip": {
-      "trigger": "axis",
-      "axisPointer": {
-        "type": "cross"
-      }
-    },
-    "toolbox": {
-      "show": true,
-      "feature": {
-        "saveAsImage": {}
-      }
-    },
-    "xAxis": {
-      "type": "category",
-      "boundaryGap": false,
-      "data": [
-        "00:00",
-        "01:15",
-        "02:30",
-        "03:45",
-        "05:00",
-        "06:15",
-        "07:30",
-        "08:45",
-        "10:00",
-        "11:15",
-        "12:30",
-        "13:45",
-        "15:00",
-        "16:15",
-        "17:30",
-        "18:45",
-        "20:00",
-        "21:15",
-        "22:30",
-        "23:45"
-      ]
-    },
-    "yAxis": {
-      "type": "value",
-      "axisLabel": {
-        "formatter": "{value} W"
       },
-      "axisPointer": {
-        "snap": true
-      }
-    },
-    "visualMap": {
-      "show": false,
-      "dimension": 0,
-      "pieces": [
+      "yAxis": {},
+      "series": [
         {
-          "lte": 6,
-          "color": "green"
-        },
-        {
-          "gt": 6,
-          "lte": 8,
-          "color": "red"
-        },
-        {
-          "gt": 8,
-          "lte": 14,
-          "color": "green"
-        },
-        {
-          "gt": 14,
-          "lte": 17,
-          "color": "red"
-        },
-        {
-          "gt": 17,
-          "color": "green"
-        }
-      ]
-    },
-    "series": [
-      {
-        "name": "用电量",
-        "type": "line",
-        "smooth": true,
-        "data": [
-          300,
-          280,
-          250,
-          260,
-          270,
-          300,
-          550,
-          500,
-          400,
-          390,
-          380,
-          390,
-          400,
-          500,
-          600,
-          750,
-          800,
-          700,
-          600,
-          400
-        ],
-        "markArea": {
+          "name": "金额",
+          "type": "bar",
           "data": [
-            [
-              {
-                "name": "早高峰",
-                "xAxis": "07:30"
-              },
-              {
-                "xAxis": "10:00"
-              }
-            ],
-            [
-              {
-                "name": "晚高峰",
-                "xAxis": "17:30"
-              },
-              {
-                "xAxis": "21:15"
-              }
-            ]
+            50000,
+            20000,
+            36000,
+            10000,
+            1000,
+            200
           ]
         }
-      }
-    ]
+      ]
+    }
+  },
+  {
+    "id": "e_1",
+    "option": {
+      "tooltip": {
+        "trigger": "item",
+        "formatter": "{a} <br/>{b}: {c} ({d}%)"
+      },
+      "legend": {
+        "orient": "vertical",
+        "x": "left",
+        "data": [
+          "直达",
+          "营销广告",
+          "搜索引擎",
+          "邮件营销",
+          "联盟广告",
+          "视频广告",
+          "百度",
+          "谷歌",
+          "必应",
+          "其他"
+        ]
+      },
+      "series": [
+        {
+          "name": "访问来源",
+          "type": "pie",
+          "selectedMode": "single",
+          "radius": [
+            0,
+            "30%"
+          ],
+          "label": {
+            "normal": {
+              "position": "inner"
+            }
+          },
+          "labelLine": {
+            "normal": {
+              "show": false
+            }
+          },
+          "data": [
+            {
+              "value": 335,
+              "name": "直达",
+              "selected": true
+            },
+            {
+              "value": 679,
+              "name": "营销广告"
+            },
+            {
+              "value": 1548,
+              "name": "搜索引擎"
+            }
+          ]
+        },
+        {
+          "name": "访问来源",
+          "type": "pie",
+          "radius": [
+            "40%",
+            "55%"
+          ],
+          "label": {
+            "normal": {
+              "formatter": "{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ",
+              "backgroundColor": "#eee",
+              "borderColor": "#aaa",
+              "borderWidth": 1,
+              "borderRadius": 4,
+              "rich": {
+                "a": {
+                  "color": "#999",
+                  "lineHeight": 22,
+                  "align": "center"
+                },
+                "hr": {
+                  "borderColor": "#aaa",
+                  "width": "100%",
+                  "borderWidth": 0.5,
+                  "height": 0
+                },
+                "b": {
+                  "fontSize": 16,
+                  "lineHeight": 33
+                },
+                "per": {
+                  "color": "#eee",
+                  "backgroundColor": "#334455",
+                  "padding": [
+                    2,
+                    4
+                  ],
+                  "borderRadius": 2
+                }
+              }
+            }
+          },
+          "data": [
+            {
+              "value": 335,
+              "name": "直达"
+            },
+            {
+              "value": 310,
+              "name": "邮件营销"
+            },
+            {
+              "value": 234,
+              "name": "联盟广告"
+            },
+            {
+              "value": 135,
+              "name": "视频广告"
+            },
+            {
+              "value": 1048,
+              "name": "百度"
+            },
+            {
+              "value": 251,
+              "name": "谷歌"
+            },
+            {
+              "value": 147,
+              "name": "必应"
+            },
+            {
+              "value": 102,
+              "name": "其他"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "e_2",
+    "option": {
+      "title": {
+        "text": "某站点用户访问来源",
+        "subtext": "纯属虚构",
+        "x": "center"
+      },
+      "tooltip": {
+        "trigger": "item",
+        "formatter": "{a} <br/>{b} : {c} ({d}%)"
+      },
+      "legend": {
+        "orient": "vertical",
+        "left": "left",
+        "data": [
+          "直接访问",
+          "邮件营销",
+          "联盟广告",
+          "视频广告",
+          "搜索引擎"
+        ]
+      },
+      "series": [
+        {
+          "name": "网站访问来源",
+          "type": "pie",
+          "radius": "55%",
+          "center": [
+            "50%",
+            "60%"
+          ],
+          "data": [
+            {
+              "value": 335,
+              "name": "直接访问"
+            },
+            {
+              "value": 310,
+              "name": "邮件营销"
+            },
+            {
+              "value": 234,
+              "name": "联盟广告"
+            },
+            {
+              "value": 135,
+              "name": "视频广告"
+            },
+            {
+              "value": 1548,
+              "name": "搜索引擎"
+            }
+          ],
+          "itemStyle": {
+            "emphasis": {
+              "shadowBlur": 10,
+              "shadowOffsetX": 0,
+              "shadowColor": "rgba(0, 0, 0, 0.5)"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "e_3",
+    "option": {
+      "title": {
+        "text": "一天用电量分布",
+        "subtext": "纯属虚构"
+      },
+      "tooltip": {
+        "trigger": "axis",
+        "axisPointer": {
+          "type": "cross"
+        }
+      },
+      "toolbox": {
+        "show": true,
+        "feature": {
+          "saveAsImage": {}
+        }
+      },
+      "xAxis": {
+        "type": "category",
+        "boundaryGap": false,
+        "data": [
+          "00:00",
+          "01:15",
+          "02:30",
+          "03:45",
+          "05:00",
+          "06:15",
+          "07:30",
+          "08:45",
+          "10:00",
+          "11:15",
+          "12:30",
+          "13:45",
+          "15:00",
+          "16:15",
+          "17:30",
+          "18:45",
+          "20:00",
+          "21:15",
+          "22:30",
+          "23:45"
+        ]
+      },
+      "yAxis": {
+        "type": "value",
+        "axisLabel": {
+          "formatter": "{value} W"
+        },
+        "axisPointer": {
+          "snap": true
+        }
+      },
+      "visualMap": {
+        "show": false,
+        "dimension": 0,
+        "pieces": [
+          {
+            "lte": 6,
+            "color": "green"
+          },
+          {
+            "gt": 6,
+            "lte": 8,
+            "color": "red"
+          },
+          {
+            "gt": 8,
+            "lte": 14,
+            "color": "green"
+          },
+          {
+            "gt": 14,
+            "lte": 17,
+            "color": "red"
+          },
+          {
+            "gt": 17,
+            "color": "green"
+          }
+        ]
+      },
+      "series": [
+        {
+          "name": "用电量",
+          "type": "line",
+          "smooth": true,
+          "data": [
+            300,
+            280,
+            250,
+            260,
+            270,
+            300,
+            550,
+            500,
+            400,
+            390,
+            380,
+            390,
+            400,
+            500,
+            600,
+            750,
+            800,
+            700,
+            600,
+            400
+          ],
+          "markArea": {
+            "data": [
+              [
+                {
+                  "name": "早高峰",
+                  "xAxis": "07:30"
+                },
+                {
+                  "xAxis": "10:00"
+                }
+              ],
+              [
+                {
+                  "name": "晚高峰",
+                  "xAxis": "17:30"
+                },
+                {
+                  "xAxis": "21:15"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    }
   }
 ]
+
