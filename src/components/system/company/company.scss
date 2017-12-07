@@ -5,9 +5,9 @@
   border: 1px solid;
   box-sizing: border-box;
   width: 100%;
+  min-width: 1200px;
   height: 100%;
   overflow-y: auto;
-
 }
 
 .eDom {
@@ -16,4 +16,6 @@
   background-color: grey;
   display: inline-block;
   border: 1px solid;
+  margin-right: 0.2%;
 }
+
