@@ -1,15 +1,12 @@
 <template>
-  <div class="row">
-    <div class="col-md-3">
+  <div class="row" style="width:100%;">
+    <div class="col-md-3 col-lg-6">
       <input class="form-control" type="text" placeholder="集团名称">
+    </div>
 
-    </div>
-    <div class="col-md-1">
-      <el-button type="primary" icon="el-icon-search" size="small">搜索</el-button>
-    </div>
-    <div class="col-md-8">
+    <div class="col-md-8 col-lg-6">
       <div class="pull-right">
-
+        <el-button type="primary" icon="el-icon-search" size="small" style="display: inline;">搜索</el-button>
         <el-button type="primary" size="small" icon="el-icon-document">新增</el-button>
         <el-button type="default" size="small" icon="el-icon-refresh" @click="reflesh()">刷新</el-button>
 

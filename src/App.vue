@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="width: 100%;height: 100%;">
     <loading :show="show"></loading>
     <!--<e-header :username="username"></e-header>-->
 
