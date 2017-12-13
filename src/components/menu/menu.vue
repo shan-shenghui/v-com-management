@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <div class="left" :class="{ develop: !isCollapse, reduce: isCollapse }">
-      <div class="sidebar-fold" @click="isCollapse = !isCollapse">
+      <div class="sidebar-fold" @click="swap">
         <i class="el-icon-d-arrow-right wrapi" v-if="!isCollapse"></i>
         <i class="el-icon-d-arrow-left wrapi" v-if="isCollapse"></i>
       </div>
@@ -13,7 +13,7 @@
           <div class="panel" v-for="(item,index) in list" :key="index">
             <div class="panel-heading">
               <h4 class="panel-title">
-                <a :href="'#item'+ index"  data-toggle="collapse" data-parent="#accordion">
+                <a :href="'#item'+ index" data-toggle="collapse" data-parent="#accordion">
                   <i class="icon-user wrapi2"></i>
                   <span class="title">
                           {{item.name}}
@@ -64,6 +64,11 @@
       list: {
         type: Array,
         required: true
+      }
+    },
+    methods: {
+      swap (){
+        this.isCollapse = !this.isCollapse;
       }
     }
   }

@@ -22,12 +22,14 @@
     data (){
       return {
         optionDatas: [],
-        eArray: [],
-        screenWidth:0
+        eArray: []
       }
     },
     mounted (){
+
       this.getEchartsData();
+    },
+    watch: {
     },
     methods: {
       getEchartsData (){
@@ -63,7 +65,7 @@
         } else {
           console.log('数据返回为空');
         }
-      },
+      }
 
     },
     components: {
