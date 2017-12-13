@@ -2,7 +2,7 @@
   "name": "vuestrap",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "bobenut <33755383@qq.com>",
+  "author": "ssh <1275526416@qq.com>",
   "private": true,
   "scripts": {
     "build": "node build/build.js",
