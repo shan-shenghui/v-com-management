@@ -17,6 +17,7 @@
 <script>
   import echarts from 'echarts'
   import draggable from 'vuedraggable'
+  import {debounce} from  '../../../assets/js/common'
 
   export  default {
     data (){
@@ -26,11 +27,14 @@
       }
     },
     mounted (){
+      const _this = this;
+     /* window.addEventListener('resize', function () {
+        debounce(_this.getEchartsData(), 250)
+      });*/
 
       this.getEchartsData();
     },
-    watch: {
-    },
+
     methods: {
       getEchartsData (){
         const _this = this;
