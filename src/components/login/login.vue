@@ -82,162 +82,169 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "login.scss";
+    @import "login.scss";
 </style>
 
 <script>
-  import {createCode} from '../../assets/js/createCode'
+    import {
+        createCode
+    } from '../../assets/js/createCode'
 
-  export  default {
-    data(){
-      return {
-        labelPosition: 'right',
-        formLabelAlign: {
-          name: '',
-          pass: '',
-          checkCode: '',
-          autoLogin: false
-        }
-      }
-    },
-    mounted(){
-      this.compareTimeRange();
-      createCode(this);
-    },
-    methods: {
-      createCodes (){
-        createCode(this);
-      },
-      compareTimeRange (){
-        let now = new Date().getTime();
-        let loginTime = localStorage.getItem('loginTime');
-        if (loginTime != null && localStorage.getItem('userName')) {
-          let range = now - loginTime;
-          let day = range / (24 * 60 * 60 * 1000);
-          if (day > 7) {
-            localStorage.removeItem('loginTime');
-            localStorage.removeItem('userName');
-          } else {
-            this.$router.push({
-              path: '/system'
-            });
-          }
-
-        } else {
-          this.$router.push({
-            path: '/login'
-          });
-        }
-      },
-      loginCheck (){
-        if (!this.formLabelAlign.name) {
-          this.$notify({
-            title: '警告',
-            message: '用户名不能为空',
-            duration: 1500,
-            type: 'warning'
-          });
-
-          return false;
-        } else if (!this.formLabelAlign.pass) {
-          this.$notify({
-            title: '警告',
-            message: '密码不能为空',
-            duration: 1500,
-            type: 'warning'
-          });
-          return false;
-        } else if (!this.formLabelAlign.checkCode) {
-          this.$notify({
-            title: '警告',
-            message: '验证码不能为空',
-            duration: 1500,
-            type: 'warning'
-          });
-          return false;
-        } else if (this.formLabelAlign.name && this.formLabelAlign.name != this.$store.state.loginMess.phoneNum) {
-          this.$notify({
-            title: '警告',
-            message: '用户名不匹配,请重新输入!',
-            duration: 1500,
-            type: 'warning'
-          });
-          this.createCodes();
-          return false;
-        } else if (this.formLabelAlign.pass && this.formLabelAlign.pass != this.$store.state.loginMess.pass) {
-          this.$notify({
-            title: '警告',
-            message: '密码输入错误,请重新输入!',
-            duration: 1500,
-            type: 'warning'
-          });
-          this.createCodes();
-          return false;
-        } else if (this.formLabelAlign.checkCode.toLowerCase() && this.formLabelAlign.checkCode != this.$store.state.loginMess.checkCode) {
-          this.$notify({
-            title: '警告',
-            message: '验证码输入错误,请重新输入!',
-            duration: 1500,
-            type: 'warning'
-          });
-          this.createCodes();
-
-          return false;
-        } else {
-
-          //
-
-          return true;
-        }
-      },
-      login(){
-
-        if (this.loginCheck()) {
-          //验证通过
-
-          if (this.formLabelAlign.autoLogin) {   //保存 date  user信息到localStorage
-            localStorage.setItem('loginTime', new Date().getTime());
-            localStorage.setItem('userName', "单胜辉");
-          } else {
-            localStorage.removeItem('userName');
-            localStorage.removeItem('loginTime');
-
-            sessionStorage.setItem('userName', '单胜辉');    //user信息到sessionStorage
-          }
-
-
-          this.getMenuList();  //
-
-
-        }
-
-      },
-      getMenuList(){
-        const _this = this;
-
-        this.$http.get('http://localhost:8080/static/data.json')
-          .then(function (response) {
-            console.log(response.data);
-            if (response.data.length) {
-
-              console.log(JSON.stringify(response.data[0]));
-              sessionStorage.setItem('allMenuList', JSON.stringify(response.data[0]));
-              _this.$router.replace({
-                path: '/system'
-              });
+    export default {
+        data() {
+            return {
+                labelPosition: 'right',
+                formLabelAlign: {
+                    name: '',
+                    pass: '',
+                    checkCode: '',
+                    autoLogin: false
+                }
             }
+        },
+        mounted() {
+            this.compareTimeRange();
+            createCode(this);
+        },
+        methods: {
+            createCodes() {
+                createCode(this);
+            },
+            compareTimeRange() {
+                let now = new Date().getTime();
+                let loginTime = localStorage.getItem('loginTime');
+                if (loginTime != null && localStorage.getItem('userName')) {
+                    let range = now - loginTime;
+                    let day = range / (24 * 60 * 60 * 1000);
+                    if (day > 7) {
+                        localStorage.removeItem('loginTime');
+                        localStorage.removeItem('userName');
+                    } else {
+                        this.$router.push({
+                            path: '/system'
+                        });
+                    }
 
-          })
-          .catch(function (err) {
-            console.log(err);
-            _this.$router.replace({
-              path: '/login'
-            });
-          });
+                } else {
+                    this.$router.push({
+                        path: '/login'
+                    });
+                }
+            },
+            loginCheck() {
+                if (!this.formLabelAlign.name) {
+                    this.$notify({
+                        title: '警告',
+                        message: '用户名不能为空',
+                        duration: 1500,
+                        type: 'warning'
+                    });
 
-      }
+                    return false;
+                } else if (!this.formLabelAlign.pass) {
+                    this.$notify({
+                        title: '警告',
+                        message: '密码不能为空',
+                        duration: 1500,
+                        type: 'warning'
+                    });
+                    return false;
+                } else if (!this.formLabelAlign.checkCode) {
+                    this.$notify({
+                        title: '警告',
+                        message: '验证码不能为空',
+                        duration: 1500,
+                        type: 'warning'
+                    });
+                    return false;
+                } else if (this.formLabelAlign.name && this.formLabelAlign.name != this.$store.state.loginMess.phoneNum) {
+                    this.$notify({
+                        title: '警告',
+                        message: '用户名不匹配,请重新输入!',
+                        duration: 1500,
+                        type: 'warning'
+                    });
+                    this.createCodes();
+                    return false;
+                } else if (this.formLabelAlign.pass && this.formLabelAlign.pass != this.$store.state.loginMess.pass) {
+                    this.$notify({
+                        title: '警告',
+                        message: '密码输入错误,请重新输入!',
+                        duration: 1500,
+                        type: 'warning'
+                    });
+                    this.createCodes();
+                    return false;
+                } else if (this.formLabelAlign.checkCode.toLowerCase() && this.formLabelAlign.checkCode != this.$store.state.loginMess.checkCode) {
+                    this.$notify({
+                        title: '警告',
+                        message: '验证码输入错误,请重新输入!',
+                        duration: 1500,
+                        type: 'warning'
+                    });
+                    this.createCodes();
+
+                    return false;
+                } else {
+
+                    //
+
+                    return true;
+                }
+            },
+            login() {
+
+                if (this.loginCheck()) {
+                    //验证通过
+
+                    if (this.formLabelAlign.autoLogin) { //保存 date  user信息到localStorage
+                        localStorage.setItem('loginTime', new Date().getTime());
+                        localStorage.setItem('userName', "单胜辉");
+                    } else {
+                        localStorage.removeItem('userName');
+                        localStorage.removeItem('loginTime');
+
+                        sessionStorage.setItem('userName', '单胜辉'); //user信息到sessionStorage
+                    }
+
+
+                    this.getMenuList(); //
+
+
+                }
+
+            },
+            getMenuList() {
+                const _this = this;
+
+                this.$http.get('http://localhost:8080/static/data.json')
+                    .then(function(response) {
+                        console.log(response.data);
+                        if (response.data.length) {
+
+                            console.log(JSON.stringify(response.data[0]));
+
+                            if (_this.formLabelAlign.autoLogin) {
+                                localStorage.setItem('allMenuList', JSON.stringify(response.data[0]));
+                            } else {
+                                sessionStorage.setItem('allMenuList', JSON.stringify(response.data[0]));
+                            }
+
+                            _this.$router.replace({
+                                path: '/system'
+                            });
+                        }
+
+                    })
+                    .catch(function(err) {
+                        console.log(err);
+                        _this.$router.replace({
+                            path: '/login'
+                        });
+                    });
+
+            }
+        }
+
     }
-
-  }
-
 </script>
