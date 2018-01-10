@@ -43,6 +43,9 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.changeBtn {
+  white-space: nowrap;
+}
 
 .ebiz-login__copy {
   text-align: center;
@@ -53,11 +56,6 @@
 
 .ebiz-login__copy {
   color: darkgray;
-}
-
-.row {
-  margin-right: 0px;
-  margin-left: -15px;
 }
 
 .fade-enter-active, .fade-leave-active {
